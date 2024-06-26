@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Cars</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">Sports Cars</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="crud.html">Manage Cars</a></li>
+                    <li class="nav-item"><a class="nav-link" href="analytics.html">Analytics</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="container mt-5">
+        <h2>Manage Sports Cars</h2>
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="card p-4">
+                    <form id="carForm">
+                        <div class="form-group">
+                            <label for="carId">Car ID:</label>
+                            <input type="text" class="form-control" id="carId" name="carId" placeholder="Enter car ID for updating/deleting">
+                        </div>
+                        <div class="form-group">
+                            <label for="model">Model:</label>
+                            <input type="text" class="form-control" id="model" name="model" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="manufacturer">Manufacturer:</label>
+                            <input type="text" class="form-control" id="manufacturer" name="manufacturer" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="year">Year:</label>
+                            <input type="number" class="form-control" id="year" name="year" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="price">Price:</label>
+                            <input type="number" class="form-control" id="price" name="price" required>
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="createCar()">Create</button>
+                        <button type="button" class="btn btn-success" onclick="updateCar()">Update</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id="carList">
+                    <h2>Car List</h2>
+                    <table class="table table-bordered table bg-white">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Model</th>
+                                <th>Manufacturer</th>
+                                <th>Year</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody id="carTableBody">
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Sports Cars. All rights reserved.</p>
+    </footer>
+</body>
+</html>
